@@ -8,7 +8,47 @@
 </head>
 <body>
 
-<%= yield %>
+<div class="jumbotron">
+  <center>
+    <h1>Mason's Electronics</h1>
+    <h3><i>Online Electronics Super Discount Store</i></h3>
+  </center>
+  <table width="100%">
+    <tr>
+      <td width="66%" valign="top" style="padding:10px">
+	<strong><i>Search Entire Inventory:</i></strong>
+	<%= text_field_tag :search, nil, id: "search", style: "width:100%" %>
+	<%= submit_tag "Search", class: "btn btn-success btn-sm" %>
+      </td>
+      <td width="33%" valign="top" style="padding:10px">
+	<strong><i>Coupons, Events and News Mailing List:</i></strong>
+	<%= text_field_tag :mailing_list, nil, id: "mailing_list", style: "width:100%" %>
+	<%= submit_tag "Add Email To Mailing List", class: "btn btn-primary btn-sm" %>
+      </td>
+    </tr>
+  </table>
+</div>
+<table>
+  <tr>
+    <td valign="top">
+      <div class="container" style="padding:10px">
+	<%= yield %>
+      </div>
+    </td>
+    <td valign="top">
+      <% for count in (1..20) %>
+	<%= link_to "Category-#{count}", "#", class: "btn btn-primary btn-lg", style: "width:100%" %>
+      <% end %>
+    </td>
+  </tr>
+</table>
+	      
+<center>
+  <%= link_to "About", "#", class: "btn" %>
+  <%= link_to "Contact", "#", class: "btn" %>
+  <%= link_to "Privacy", "#", class: "btn" %>
+  <%= link_to "Terms", "#", class: "btn" %>
+</center>
 
 </body>
 </html>

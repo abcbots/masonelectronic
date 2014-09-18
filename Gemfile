@@ -42,7 +42,7 @@ gem 'spring',        group: :development
 # gem 'debugger'
 
 gem 'closure_tree'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass' #https://github.com/twbs/bootstrap-sass 
 gem 'profanity_filter'
 
 gem 'autoprefixer-rails' # https://github.com/twbs/bootstrap-sass
