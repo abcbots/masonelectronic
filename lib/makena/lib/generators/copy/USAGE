@@ -1,0 +1,7 @@
+Description:
+    Change all words to new words
+
+Example:
+    rails g copy app/ apple JackFruit
+
+    This will change all words of "apple", "Apple", "APPLE" to, "jackfruit", "Jack fruit", "JACKFRUIT" (and more...)

@@ -1,0 +1,44 @@
+Description:
+
+    Explain the generator
+
+    Type: "success save"
+    
+    1. saves core, universal directories and files to a storage app called "success", 
+    in a sibiling directory to the current app directory 
+    (basically, if you are in /mycoolapp, the "success" is located at "../success").
+
+Example:
+
+    rails generate success save
+
+    This will run:
+
+    Reference: http://rubydoc.info/github/wycats/thor/master/Thor/Actions
+
+    Where directory and add_file copy recursively files from current to "success" app in "../success" direcory
+
+      directory "app", "../success/app"
+      directory "config", "../success/config"
+      directory "lib", "../success/lib"
+      directory "public/themes", "../success/public/themes"
+      copy_file "config/initializers/fog.rb", "../success/config/initializers/fog.rb"
+      copy_file "config/application.yml", "../success/config/application.yml"
+      copy_file "public/favicon.ico", "../success/public/favicon.ico"
+      copy_file ".gitignore", "../success/.gitignore"
+      copy_file "Gemfile", "../success/Gemfile"
+
+
+    rails generate success fresh
+
+      Does the reverse of save
+      
+      directory "../success/app/controllers/layouts_controller.rb", "app/controllers/layouts_controller.rb"
+      directory "../success/app/views/layouts", "app/views/layouts"
+      directory "../success/app/helpers/layouts_helper.rb", "app/helpers/layouts_helper.rb"
+      directory "../success/app/helpers/layout_helper.rb", "app/helpers/layout_helper.rb"
+      directory "../success/lib/generators", "lib/generators"
+      directory "../success/public/themes", "public/themes"
+      copy_file "../success/Gemfile", "Gemfile"
+
+

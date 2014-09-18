@@ -1,0 +1,26 @@
+Description:
+
+    To change this USAGE document : $ vim lib/generators/connection/USAGE
+    To get here: $ rails g connection -h(elp)
+
+    Examples:
+    
+    $ rails g(generator) connection alpha beta feature1|feature2|feature3...
+    where alpha = The name of object connecting from
+    where beta = The name of the non-existant object connecting to
+
+    if alpha = beta, 
+      then beta is not created
+      then alpha is parent to beta
+      then beta is child to alpha
+
+    if beta = none, 
+      then beta is not created
+
+Example:
+
+    $ rails g connection user location name|content|location|image
+    $ rails g connection spot note name|content|image
+
+    This will create:
+        what/will/it/create
